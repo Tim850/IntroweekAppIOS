@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  IntoweekApp
+*/
+
+"Home" = "Home";
+"Associations" = "Verenigingen";
+"Help" = "Help";
+"Account" = "Account";
+"Score" = "Score";
+
+"No posts found." = "Geen posts gevonden.";
+
+" day(s) ago" = " dag(en) geleden";

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  IntoweekApp
+*/
+
+"Home" = "Home";
+"Associations" = "Associations";
+"Help" = "Help";
+"Account" = "Account";
+"Score" = "Score";
+
+"No posts found." = "No posts found.";
+
+" day(s) ago" = " day(s) ago";
