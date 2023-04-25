@@ -13,7 +13,7 @@ struct AccountView: View {
         {
             VStack
             {
-                Text("4")
+                Text(NSLocalizedString("My account", comment: ""))
             }
             .navigationBarBackButtonHidden(false)
             .toolbar {

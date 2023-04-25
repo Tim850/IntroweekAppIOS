@@ -16,7 +16,7 @@ class IntroweekAPI {
     func fetchFeed(completion: @escaping (Result<[Post], Error>) -> Void) {
         let url = URL(string: "https://introapi-functionapp-k6j2lqpfqvjp4.azurewebsites.net/api/feed")!
         fetch(type: AllPostsResponse.self, url: url, completion: { result in
-            print(result)
+            debugPrint(result)
             switch result {
             case .success(let response):
                 let feedItems = response.results
@@ -29,7 +29,7 @@ class IntroweekAPI {
                     //        likeCount: entity.likeCount,
                     //        postStatus: entity.postStatus)
                     //})
-                print(feedItems)
+                debugPrint(feedItems)
                 let posts = [ Post(  id: 1,
                                      description: "w",
                                      image: "w",
@@ -66,6 +66,7 @@ class IntroweekAPI {
 private extension IntroweekAPI {
     
     func fetch<T: Decodable>(type: T.Type, url: URL, completion: @escaping (Result<T, Error>) -> Void) {
+        print("Entered the fetch") //REACHES HERE
         URLSession.shared.dataTaskPublisher(for: url)
             .map({ $0.data })
             .decode(type: T.self, decoder: JSONDecoder())
@@ -74,8 +75,10 @@ private extension IntroweekAPI {
                 receiveCompletion: { result in
                     switch result {
                     case .finished:
+                        print("Received data from api")
                         break
                     case .failure(let error):
+                        print("failed to receive data from api") //WHYYYYY????
                         completion(.failure(error))
                     }
                 },
@@ -86,3 +89,4 @@ private extension IntroweekAPI {
             .store(in: &cancellables)
     }
 }
+

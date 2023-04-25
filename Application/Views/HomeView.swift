@@ -14,11 +14,11 @@ struct HomeView: View {
                 if (introweekStore.posts.isEmpty) {
                     Text(NSLocalizedString("No posts found.", comment: ""))
                         .font(.title2)
+                        .onAppear(perform: handleOnAppear)
                 } else {
                     List(introweekStore.posts) { post in
                         PostView(post: post)
                     }
-                    .onAppear(perform: handleOnAppear)
                 }
             }
             .navigationBarBackButtonHidden(false)

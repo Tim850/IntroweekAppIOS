@@ -13,7 +13,7 @@ struct VerenigingenView: View {
         {
             VStack
             {
-                Text("2")
+                Text(NSLocalizedString("Associations", comment: ""))
             }
             .navigationBarBackButtonHidden(false)
             .toolbar {
