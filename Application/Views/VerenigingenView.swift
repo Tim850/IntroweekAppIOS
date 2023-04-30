@@ -14,13 +14,16 @@ struct VerenigingenView: View {
             VStack
             {
                 Text(NSLocalizedString("Associations", comment: ""))
+                    .offset(y:38)
+                    .font(.title2)
+                Spacer()
             }
             .navigationBarBackButtonHidden(false)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: ModerationView()){
-                        Image(systemName: "person.2.square.stack.fill")
-                    }
+                    //NavigationLink(destination: ModerationView()){
+                    //    Image(systemName: "person.2.square.stack.fill")
+                    //}
                 }
             }
         }

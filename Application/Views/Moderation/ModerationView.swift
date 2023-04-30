@@ -9,7 +9,7 @@ struct ModerationView: View {
             HStack
             {
                 NavigationLink(destination: ModerationFoutView()){
-                    Text("Fout")
+                    Text(NSLocalizedString("Wrong", comment: ""))
                         .frame(width: 115, height: 40)
                         .foregroundColor(.black)
                         .background(Color.white)
@@ -21,7 +21,7 @@ struct ModerationView: View {
                         )
                 }
                 NavigationLink(destination: ModerationWachtendView()){
-                    Text("Wachtend")
+                    Text(NSLocalizedString("Awaiting", comment: ""))
                         .frame(width: 115, height: 40)
                         .foregroundColor(.black)
                         .background(Color(red: 147 / 255, green: 112 / 255, blue: 219 / 255, opacity: 0.7 / 1))
@@ -29,7 +29,7 @@ struct ModerationView: View {
                         .font(Font.subheadline)
                 }
                 NavigationLink(destination: ModerationGoedView()){
-                    Text("Goed")
+                    Text(NSLocalizedString("Good", comment: ""))
                         .frame(width: 115, height: 40)
                         .foregroundColor(.black)
                         .background(Color.white)

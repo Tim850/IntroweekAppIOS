@@ -21,15 +21,13 @@ struct PostView: View {
                             .font(.title3)
                         Spacer()
                     }
-
                     HStack
                     {
-                        Text("2" + NSLocalizedString("day(s) ago", comment: ""))
+                        Text("2 " + NSLocalizedString("day(s) ago", comment: ""))
                             .font(.subheadline)
                         Spacer()
                     }
                 }
-
                 
                 Spacer()
             }

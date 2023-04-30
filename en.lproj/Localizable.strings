@@ -1,15 +1,20 @@
-/* 
-  Localizable.strings
-  IntoweekApp
-*/
 
 "Home" = "Home";
 "Associations" = "Associations";
 "Help" = "Help";
 "Account" = "Account";
-"My account" = "My account"
-"Score" = "Score";
+"My account" = "My account";
+"Scores" = "Scores";
+
+"My posts" = "My posts";
+
+"Fequently asked questions" = "Frequently asked questions";
+
 
 "No posts found." = "No posts found.";
+
+"Wrong" = "Wrong";
+"Good" = "Good";
+"Awaiting" = "Awaiting";
 
 " day(s) ago" = " day(s) ago";

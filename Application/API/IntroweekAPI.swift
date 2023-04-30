@@ -66,7 +66,7 @@ class IntroweekAPI {
 private extension IntroweekAPI {
     
     func fetch<T: Decodable>(type: T.Type, url: URL, completion: @escaping (Result<T, Error>) -> Void) {
-        print("Entered the fetch") //REACHES HERE
+        print("Entered the fetch") // It reaches here
         URLSession.shared.dataTaskPublisher(for: url)
             .map({ $0.data })
             .decode(type: T.self, decoder: JSONDecoder())
@@ -79,6 +79,7 @@ private extension IntroweekAPI {
                         break
                     case .failure(let error):
                         print("failed to receive data from api") //WHYYYYY????
+                        debugPrint(result)
                         completion(.failure(error))
                     }
                 },

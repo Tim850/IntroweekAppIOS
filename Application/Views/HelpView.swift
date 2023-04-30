@@ -13,14 +13,26 @@ struct HelpView: View {
         {
             VStack
             {
-                Text("3")
+                Text(NSLocalizedString("Help", comment: ""))
+                    .offset(y:38)
+                    .font(.title2)
+                
+                Text("Emergency number: 06-20084638")
+                    .padding(.vertical, 40)
+                    .font(.title3)
+                    .foregroundColor(.red)
+                
+                Text(NSLocalizedString("Frequently asked questions", comment: ""))
+                    .font(.title2)
+                
+                Spacer()
             }
             .navigationBarBackButtonHidden(false)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: ModerationView()){
-                        Image(systemName: "person.2.square.stack.fill")
-                    }
+                    //NavigationLink(destination: ModerationView()){
+                    //    Image(systemName: "person.2.square.stack.fill")
+                    //}
                 }
             }
         }
